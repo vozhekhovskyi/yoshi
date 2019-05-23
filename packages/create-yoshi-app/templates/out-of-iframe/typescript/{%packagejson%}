@@ -8,7 +8,7 @@
     "email": "{%authorEmail%}"
   },
   "scripts": {
-    "start": "yoshi start --entry-point=./test/fake-server.js",
+    "start": "yoshi start --entry-point=dist/fake-server.js",
     "precommit": "lint-staged",
     "pretest": "yoshi build",
     "test": "yoshi test --jest",
@@ -53,6 +53,7 @@
     "*.{js,scss,less}": "yoshi lint"
   },
   "yoshi": {
+    "projectType": "app",
     "liveReload": false,
     "hmr": false,
     "externals": {
@@ -76,7 +77,7 @@
       "editorApp": "./editorApp.tsx",
       "viewerApp": "./viewerApp/viewerWidget.tsx",
       "viewerScript": "./viewerApp/viewerScript.ts",
-      "wix-private-mock": "../__tests__/wix-private.mock.js"
+      "wix-private-mock": "../dev/wix-private.mock.js"
     },
     "servers": {
       "cdn": {
