@@ -1,6 +1,6 @@
 module.exports = {
   server: {
-    command: 'node test/fake-server.js',
+    command: 'node __tests__/fake-server.js',
     port: 3100,
   },
   puppeteer: {
