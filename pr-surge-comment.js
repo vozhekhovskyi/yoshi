@@ -5,10 +5,8 @@ const promisify = require('promisify');
 const GitHub = require('github-api');
 const { readFileSync } = require('fs');
 const jwt = require('jsonwebtoken');
-const path = require('path');
 
-const keyPath = path.join(process.cwd(), 'test-pr-surge-comment.2019-05-24.private-key');
-const privateKey = readFileSync(keyPath);
+const privateKey = readFileSync('test-pr-surge-comment.2019-05-24.private-key.pem');
 const now = Math.floor(Date.now() / 1000);
 const payload = {
   iat: now, // Issued at time
