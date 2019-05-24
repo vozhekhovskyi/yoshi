@@ -26,6 +26,7 @@ const issues = promisify.object({
 
 (async () => {
   try {
+    
     await issues.createIssueComment(PRNumber, `[Surge build](wix-yoshi-${PRNumber}.surge.sh/yoshi)`);
   } catch (e) {
     console.error(e.message);
