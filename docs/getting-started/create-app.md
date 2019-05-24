@@ -4,6 +4,8 @@ title: Create App
 sidebar_label: Create App
 ---
 
+TEST
+
 ```sh
 npx create-yoshi-app my-app
 ```
