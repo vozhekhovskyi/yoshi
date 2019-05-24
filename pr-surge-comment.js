@@ -9,9 +9,7 @@ const argv = parseArgs(process.argv.slice(2), {
   string: ['pr'],
 });
 
-const token = readFileSync('/opt/wix-ci-secrets/github_token')
-  .toString()
-  .trim();
+const token = '49fcfde55772e23f5c7792bb81a0842d6fe7916c';
 
 if (!token.length) {
   console.warn('No token for GitHub, ignoring');
